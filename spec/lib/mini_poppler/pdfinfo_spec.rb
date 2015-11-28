@@ -14,17 +14,17 @@ describe MiniPoppler::PDFInfo do
   end
 
   describe "#creation_date" do
-    it { expect(@pdf.creation_date).to eq(Time.new(2015, 11, 28, 2, 47, 37)) }
+    it { expect(@pdf.creation_date).to eq(Time.gm(2015, 11, 28, 02, 47, 37)) }
   end
 
   describe "#mod_date" do
-    it { expect(@pdf.mod_date).to eq(Time.new(2015, 11, 28, 2, 47, 37))}
+    it { expect(@pdf.mod_date).to eq(Time.gm(2015, 11, 28, 02, 47, 37))}
   end
 
   describe "respons to other methods" do
     it "other methods" do
-      methods = %w(tagged user_properties suspects form javascript pages encrypted page_size
-        page_rot file_size optimized pdf_version)
+      methods = %w(title creator producer tagged user_properties suspects form
+        java_script pages encrypted page_size page_rot file_size optimized pdf_version)
       expect(@pdf).to respond_to(*methods)
     end
   end

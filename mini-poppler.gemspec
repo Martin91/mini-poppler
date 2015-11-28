@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage     = 'https://github.com/Martin91/mini-poppler'
   s.license      = 'MIT'
 
+  s.add_runtime_dependency 'activesupport', '>= 4.0.0'
   s.add_development_dependency 'rspec', '~> 3.4.0', '>= 3.4.0'
   s.add_development_dependency 'byebug', '~> 8.2', '>= 8.2.1'
 end
